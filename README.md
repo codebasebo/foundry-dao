@@ -1,6 +1,7 @@
 # Foundry DAO Project
 
-A decentralized autonomous organization (DAO) implementation using Foundry.
+ A decentralized autonomous organization (DAO) implementation using Foundry.
+ It is built using the Solidity programming language and implements on-chain governance features. The DAO allows token holders to propose, vote on, and execute changes to a managed contract.
 
 ## Overview
 
