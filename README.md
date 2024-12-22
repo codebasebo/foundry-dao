@@ -35,7 +35,7 @@ This project demonstrates how to create a DAO using the Foundry development fram
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/codebasebo/foundry-dao
 cd foundry-dao
 ```
 
