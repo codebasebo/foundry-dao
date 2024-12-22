@@ -1,66 +1,60 @@
-## Foundry
+# Foundry DAO Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized autonomous organization (DAO) implementation using Foundry.
 
-Foundry consists of:
+## Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This project demonstrates how to create a DAO using the Foundry development framework.
 
-## Documentation
+## Project Structure
 
-https://book.getfoundry.sh/
+### Contracts
+
+- `Box.sol`: A simple contract that can store and retrieve a value, serving as the contract that the DAO will govern.
+- `GovernanceToken.sol`: ERC20 token that grants voting rights in the DAO.
+- `GovernorContract.sol`: Main governance contract implementing voting mechanisms and proposal lifecycle.
+- `TimeLock.sol`: Contract that adds a delay between proposal passage and execution for security.
+
+### Scripts
+
+- `DeployGovernance.s.sol`: Script to deploy governance-related contracts.
+
+### Tests
+
+- `GovernanceTest.t.sol`: Integration tests for the governance system.
+
+## Getting Started
+
+### Prerequisites
+
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+- [Git](https://git-scm.com/downloads)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd foundry-dao
+```
+
+2. Install dependencies:
+```bash
+forge install
+```
 
 ## Usage
 
-### Build
-
-```shell
-$ forge build
+Build the project:
+```bash
+forge build
 ```
 
-### Test
-
-```shell
-$ forge test
+Run tests:
+```bash
+forge test
 ```
 
-### Format
+## License
 
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project is licensed under the MIT License.
